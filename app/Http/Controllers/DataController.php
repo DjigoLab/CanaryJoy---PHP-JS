@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+
 class DataController extends Controller
 {
     //
@@ -11,14 +13,16 @@ class DataController extends Controller
         switch ($tp) {
 
             case "tr":
-                return view('layout')
+                $places = DB::select('select * from travel');
+                return view('places.layout')
                     ->with('title', 'Travel around Gran Canaria')
-                    ->with('json', 'json');
+                    ->with('places',$places);
                 break;
             case "pt":
-                return view('layout')
+                $places = DB::select('select * from party');
+                return view('places.layout')
                     ->with('title', 'Party around Gran Canaria')
-                    ->with('json', 'json');
+                    ->with('places',$places);
                 break;
         }
 

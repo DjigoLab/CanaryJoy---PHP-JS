@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<title>{{$title}}}</title>
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-
+<link rel="stylesheet" href="{{asset('css/list.css')}}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Tillana" rel="stylesheet"> 
     <!-- Scripts -->
@@ -20,9 +20,18 @@
 <body>
 <nav class="menu">
     <button class="swap"><i class="fas fa-exchange-alt"></i></button>
-<h3>{{$title}}</h3>
+<h3 class="title">{{$title}}</h3>
 <button class="user"><i class="fas fa-user"></i></button>
 </nav>
+
+<div class="search-container">
+    <input type="text" placeholder="Looking for something specific?">
+    <i class="fas fa-search animated rubberBand"></i>
+</div>
+
+<div class="list-wrapper">
+@yield('show-places')
+</div>
 
 </body>
 </html>

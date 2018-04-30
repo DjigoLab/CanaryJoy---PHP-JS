@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: silver; }
+
+.menu {
+  background: #e0e0e0;
+  display: flex;
+  font-family: "Tillana", cursive;
+  justify-content: flex-start;
+  text-shadow: #222 1px 1px 3px; }
+  .menu .title {
+    color: whitesmoke; }
+  .menu .user {
+    margin-left: auto; }
+  .menu button {
+    border: 0px;
+    background: none;
+    padding: 15px;
+    margin: 0px 15px;
+    font-size: 20px; }
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: whitesmoke;
+  align-items: center; }
+  .search-container input {
+    width: 80%;
+    font-family: "Tillana", cursive;
+    font-size: 16px;
+    background: none;
+    border: 0px;
+    border-bottom: 3px solid whitesmoke;
+    margin-left: auto;
+    margin-right: auto; }
+  .search-container i {
+    right: 10%;
+    font-size: 20px;
+    opacity: 0.5;
+    position: absolute; }
