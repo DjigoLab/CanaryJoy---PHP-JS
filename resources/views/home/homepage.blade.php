@@ -25,11 +25,11 @@
         <div class="columns">
             <div class="column column1">
                 <h2 class="animated zoomIn">Travel</h2>
-                <button class="gototravel"><i class="fas fa-angle-double-up animated infinite slideOutUp"></i></button>
+                <a href="/search/tr"><button class="gototravel" ><i class="fas fa-angle-double-up animated infinite slideOutUp"></i></button></a>
             </div>
             <div class="column column2">
                 <h2 class="animated zoomIn">Party</h2>
-                <button class="gotoparty"><i class="fas fa-angle-double-up  animated infinite slideOutUp"></i></button>
+                <a href="/search/pt"><button class="gotoparty"><i class="fas fa-angle-double-up  animated infinite slideOutUp"></i></button></a>
             </div>
         </div>    
     </body>

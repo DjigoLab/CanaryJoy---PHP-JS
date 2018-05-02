@@ -15,14 +15,16 @@ class DataController extends Controller
             case "tr":
                 $places = DB::select('select * from travel');
                 return view('places.layout')
-                    ->with('title', 'Travel around Gran Canaria')
-                    ->with('places',$places);
+                    ->with('title', 'Travel')
+                    ->with('places',$places)
+                    ->with('swap',"/search/pt");
                 break;
             case "pt":
                 $places = DB::select('select * from party');
                 return view('places.layout')
-                    ->with('title', 'Party around Gran Canaria')
-                    ->with('places',$places);
+                    ->with('title', 'Party')
+                    ->with('places',$places)
+                    ->with('swap',"/search/tr");
                 break;
         }
 
