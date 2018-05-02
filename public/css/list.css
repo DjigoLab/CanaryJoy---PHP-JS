@@ -98,7 +98,7 @@ body {
   border-radius: 5px;
   opacity: 0;
   display: none;
-  background: whitesmoke;
+  background: silver;
   z-index: 999; }
   .user-form .register-form {
     display: flex;
@@ -106,8 +106,14 @@ body {
     padding: 15px; }
     .user-form .register-form .register-button button {
       width: 80%;
-      border-radius: 0px;
-      padding: 40px;
+      background-color: whitesmoke;
+      /* Green */
+      border: none;
+      color: black;
+      text-align: center;
+      padding: 30px;
+      text-decoration: none;
+      display: inline-block;
       font-size: 40px; }
     .user-form .register-form .field {
       display: flex;
