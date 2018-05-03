@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Tillana" rel="stylesheet"> 
-    <!-- Scripts -->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Montserrat" rel="stylesheet">     <!-- Scripts -->
     <script
 			  src="https://code.jquery.com/jquery-3.3.1.js"
 			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -24,11 +23,11 @@
     <body>
         <div class="columns">
             <div class="column column1">
-                <h2 class="animated zoomIn">Travel</h2>
+                <h2 class="animated zoomIn travel-title">Travel</h2>
                 <a href="/search/tr"><button class="gototravel" ><i class="fas fa-angle-double-up animated infinite slideOutUp"></i></button></a>
             </div>
             <div class="column column2">
-                <h2 class="animated zoomIn">Party</h2>
+                <h2 class="animated zoomIn party-title">Party</h2>
                 <a href="/search/pt"><button class="gotoparty"><i class="fas fa-angle-double-up  animated infinite slideOutUp"></i></button></a>
             </div>
         </div>    

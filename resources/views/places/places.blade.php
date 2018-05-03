@@ -2,12 +2,12 @@
 @foreach ($places as $place)
 
 <div class="card animated flipInX">
-    <div class="img-container" style="background: url({{$place->image}}) no-repeat center center fixed; background-size: cover; ")>
+    <div class="img-container" style="background: url({{$place->image}}) no-repeat center center; background-size: cover; ")>
         <h4>{{$place->title}}</h4>
     </div>
    
     <div class="container">
-      <p>{{$place->description}}</p>
+      <p class="desc">{{$place->description}}</p>
     </div>
 
     <div class="options">

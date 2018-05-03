@@ -1,5 +1,5 @@
 
-<div class="place-info">
+<div class="place-info animated">
     <div class="img-container" style="background: url({{$places[0]->image}}) no-repeat center center fixed; background-size: cover; ")>
             <i class="fas fa-arrow-left"></i>
             <h4>{{$places[0]->title}}</h4>
@@ -39,6 +39,8 @@
     async defer></script>
 
   </div> 
-  <div class="place-contact"> email bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla bla </div>
+  <div class="place-contact"> 
+  <p>  email bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla bla</p>
+   </div>
 
 </div>

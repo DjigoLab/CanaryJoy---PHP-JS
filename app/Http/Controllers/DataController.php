@@ -18,7 +18,7 @@ class DataController extends Controller
                     ->with('title', 'Travel')
                     ->with('places',$places)
                     ->with('swap',"/search/pt")
-                    ->with('bg',"../img/nobg.jpg) no-repeat center center fixed; background-size: cover;");
+                    ->with('bg',"../img/green.png)");
                 break;
             case "pt":
                 $places = DB::select('select * from party');
@@ -26,7 +26,7 @@ class DataController extends Controller
                     ->with('title', 'Party')
                     ->with('places',$places)
                     ->with('swap',"/search/tr")
-                    ->with('bg',"../img/nobg.jpg) no-repeat center center fixed; background-size: cover; height: 100%;");
+                    ->with('bg',"../img/purple.png);");
 
                 break;
         }

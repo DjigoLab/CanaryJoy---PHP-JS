@@ -7,6 +7,7 @@ jQuery(document).ready(function() {
 
   var triggeredOnce = false;
 
+  
   function travelZoom() {
     partyColumn.find("h2").removeClass("zoomIn");
     partyColumn.find("h2").addClass("zoomOut");
