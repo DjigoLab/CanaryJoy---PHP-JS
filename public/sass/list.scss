@@ -6,6 +6,10 @@ body {
   background-color: silver;
 }
 
+.body-bg {
+  background-size: cover;
+}
+
 .menu {
   background: #e0e0e0;
   display: flex;
@@ -16,9 +20,8 @@ body {
   .title {
     color: whitesmoke;
     text-align: center;
+    margin-left: auto;
   }
-
-  margin-left: auto;
 
   a {
     border: 0px;
@@ -47,16 +50,21 @@ body {
     width: 80%;
     font-family: "Tillana", cursive;
     font-size: 16px;
-    background: none;
+    background: #e0e0e025;
+    padding: 5px;
     border: 0px;
+    color: white;
+
     border-bottom: 3px solid whitesmoke;
     margin-left: auto;
     margin-right: auto;
+    &::placeholder {
+      color: white;
+    }
   }
   i {
     right: 10%;
     font-size: 20px;
-    opacity: 0.5;
     position: absolute;
   }
 }
@@ -66,7 +74,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 30px;
   padding: 30px;
-  .card {
+  .card,
+  .place-info {
     display: flex;
     flex-flow: column;
     background: #e0e0e0;
@@ -89,8 +98,41 @@ body {
       }
     }
   }
+
+  .place-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-height: 600px;
+    width: 100%;
+    border-radius: 0px;
+
+    #map {
+      margin: 15px -15px;
+      height: 100%;
+      min-height: 200px;
+    }
+
+    .img-container {
+      border-radius: 0px;
+      min-height: 300px;
+      i {
+        position: absolute;
+        top: 22px;
+        left: 5%;
+        font-size: 30px;
+        color: whitesmoke;
+      }
+    }
+  }
   .container {
     padding: 15px;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
   }
   .options {
     font-size: 22px;
@@ -102,6 +144,25 @@ body {
     }
     :first-child {
       margin-right: auto;
+    }
+  }
+  .place-contact {
+    margin-top: auto;
+    padding: 15px;
+  }
+}
+.place-tags {
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 15px;
+    list-style: none;
+    .tag {
+      margin: 15px;
+      padding: 5px;
+      border: 1px solid;
+      border-radius: 5px;
     }
   }
 }
@@ -128,8 +189,8 @@ body {
     flex-flow: column;
     padding: 15px;
 
-    .register-button{
-      button{
+    .register-button {
+      button {
         width: 80%;
         background-color: whitesmoke; /* Green */
         border: none;
@@ -141,31 +202,30 @@ body {
         font-size: 40px;
       }
     }
-    .field{
+    .field {
       display: flex;
       padding: 15px;
 
-
       justify-content: center;
-    .label-wrapper {
-      position: absolute;
-      color: gray;
-     
+      .label-wrapper {
+        position: absolute;
+        color: gray;
+      }
+      input {
+        width: 100%;
+        border: 0px;
+        padding: 5px;
+      }
     }
-    input{
-      width: 100%;
-      border: 0px;
-      padding: 5px;
-    }
-  }
   }
 }
 
-.already{
+.already {
   color: silver;
-p{
-  text-align: center;
-}}
+  p {
+    text-align: center;
+  }
+}
 
 .parentDisable {
   display: none;

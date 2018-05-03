@@ -17,7 +17,7 @@
                 crossorigin="anonymous"></script>
         <script src="{{asset('js/forms.js')}}"></script>
     </head>
-    <body>
+<body class="body-bg" style="background:url({{$bg}} ">
         <nav class="menu">
         <a href="{{$swap}}"> <button class="swap"><i class="fas fa-exchange-alt"></i></button></a>
             <h3 class="title">{{$title}}</h3>
@@ -34,6 +34,7 @@
         </div>
         <div class="list-wrapper">
             @include('places.places')
+            @include('places.place')
         </div>
     </body>
     </html>

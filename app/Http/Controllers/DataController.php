@@ -17,14 +17,17 @@ class DataController extends Controller
                 return view('places.layout')
                     ->with('title', 'Travel')
                     ->with('places',$places)
-                    ->with('swap',"/search/pt");
+                    ->with('swap',"/search/pt")
+                    ->with('bg',"../img/nobg.jpg) no-repeat center center fixed; background-size: cover;");
                 break;
             case "pt":
                 $places = DB::select('select * from party');
                 return view('places.layout')
                     ->with('title', 'Party')
                     ->with('places',$places)
-                    ->with('swap',"/search/tr");
+                    ->with('swap',"/search/tr")
+                    ->with('bg',"../img/nobg.jpg) no-repeat center center fixed; background-size: cover; height: 100%;");
+
                 break;
         }
 
