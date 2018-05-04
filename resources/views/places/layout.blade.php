@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{$title}}</title>
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -17,12 +18,21 @@
                 crossorigin="anonymous"></script>
         <script src="{{asset('js/forms.js')}}"></script>
         <script src="{{asset('js/place.js')}}"></script>
+        
     </head>
 <body class="body-bg" style="background:url({{$bg}} ">
         <nav class="menu">
         <a href="{{$swap}}"> <button class="swap"><i class="fas fa-exchange-alt"></i></button></a>
             <h3 class="title">{{$title}}</h3>
-        <a> <button class="user"><i class="fas fa-user"></i></button></a>
+        <a> 
+                @guest
+                <p class="username"> Register </p> 
+
+                @else
+                <p class="username"> {{ Auth::user()->name }}</p> 
+                @endguest
+
+                <button class="user"><i class="fas fa-user"></i></button></a>
         </nav>
         <div class="parentDisable animated"></div>
         <div class="user-form animated">

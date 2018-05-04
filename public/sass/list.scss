@@ -19,9 +19,14 @@ body {
     font-family: "Monserrat", sans-serif;
     text-align: center;
     margin-left: auto;
+    align-self: center;
   }
 
   a {
+    p{
+      font-weight: bold;
+      margin-right: 10px;
+    }
     border: 0px;
     background: none;
     padding: 15px;
@@ -100,7 +105,7 @@ body {
           background: url("../img/purple.png");
         }
         &.light {
-          color: #222;
+          color: whitesmoke;
           background: url("../img/green.png");
         }
         height: 15%;
@@ -109,6 +114,7 @@ body {
         font-size: 20px;
         padding: 5px;
         box-shadow: 0px 8px 8px -5px #333;
+        //box-shadow: 0px -5px 15px #000, 0px 5px 15px #000;
       }
       img {
         width: 100%;
@@ -207,9 +213,10 @@ body {
   padding: 15px;
   width: 90%;
   border-radius: 5px;
+  font-family: "Monserrat", sans-serif;
   opacity: 0;
   display: none;
-  background: silver;
+  background: whitesmoke;
   z-index: 999;
 
   .register-form {
@@ -220,9 +227,10 @@ body {
     .register-button {
       button {
         width: 80%;
-        background-color: whitesmoke; /* Green */
+        background-color: none;
         border: none;
         color: black;
+        border: 2px solid silver;
         text-align: center;
         padding: 30px;
         text-decoration: none;
@@ -238,30 +246,50 @@ body {
       .label-wrapper {
         position: absolute;
         color: gray;
+        left: 5%;
+        margin-top: 5px;
+        i {
+          margin-right: 10px;
+        }
+        label {
+          position: absolute;
+          width: 300px;
+          bottom: 0px;
+          transition: ease-in-out 0.5s;
+          &.focus {
+            bottom: 20px;
+          }
+        }
       }
       input {
         width: 100%;
         border: 0px;
         padding: 5px;
+        background: none;
+        border-bottom: 2px solid silver;
       }
     }
   }
 }
 
 .already {
-  color: silver;
+  color: rgb(54, 54, 54);
   p {
     text-align: center;
+  }
+  a {
+    font-weight: bold;
   }
 }
 
 .parentDisable {
+  transition: ease-in-out 0.5s;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   background: #000;
-  opacity: 0.8;
+  opacity: 0;
   z-index: 998;
   height: 100%;
   width: 100%;

@@ -14,13 +14,17 @@ body {
   .menu .title {
     font-family: "Monserrat", sans-serif;
     text-align: center;
-    margin-left: auto; }
+    margin-left: auto;
+    align-self: center; }
   .menu a {
     border: 0px;
     background: none;
     padding: 15px;
     display: flex;
     margin: 0px 15px; }
+    .menu a p {
+      font-weight: bold;
+      margin-right: 10px; }
     .menu a:last-child {
       margin-left: auto; }
     .menu a button {
@@ -91,7 +95,7 @@ body {
           background: url("../img/purple.png"); }
         .list-wrapper .card .img-container h4.light,
         .list-wrapper .place-info .img-container h4.light {
-          color: #222;
+          color: whitesmoke;
           background: url("../img/green.png"); }
       .list-wrapper .card .img-container img,
       .list-wrapper .place-info .img-container img {
@@ -167,9 +171,10 @@ body {
   padding: 15px;
   width: 90%;
   border-radius: 5px;
+  font-family: "Monserrat", sans-serif;
   opacity: 0;
   display: none;
-  background: silver;
+  background: whitesmoke;
   z-index: 999; }
   .user-form .register-form {
     display: flex;
@@ -177,10 +182,10 @@ body {
     padding: 15px; }
     .user-form .register-form .register-button button {
       width: 80%;
-      background-color: whitesmoke;
-      /* Green */
+      background-color: none;
       border: none;
       color: black;
+      border: 2px solid silver;
       text-align: center;
       padding: 30px;
       text-decoration: none;
@@ -192,24 +197,40 @@ body {
       justify-content: center; }
       .user-form .register-form .field .label-wrapper {
         position: absolute;
-        color: gray; }
+        color: gray;
+        left: 5%;
+        margin-top: 5px; }
+        .user-form .register-form .field .label-wrapper i {
+          margin-right: 10px; }
+        .user-form .register-form .field .label-wrapper label {
+          position: absolute;
+          width: 300px;
+          bottom: 0px;
+          transition: ease-in-out 0.5s; }
+          .user-form .register-form .field .label-wrapper label.focus {
+            bottom: 20px; }
       .user-form .register-form .field input {
         width: 100%;
         border: 0px;
-        padding: 5px; }
+        padding: 5px;
+        background: none;
+        border-bottom: 2px solid silver; }
 
 .already {
-  color: silver; }
+  color: #363636; }
   .already p {
     text-align: center; }
+  .already a {
+    font-weight: bold; }
 
 .parentDisable {
+  transition: ease-in-out 0.5s;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   background: #000;
-  opacity: 0.8;
+  opacity: 0;
   z-index: 998;
   height: 100%;
   width: 100%; }

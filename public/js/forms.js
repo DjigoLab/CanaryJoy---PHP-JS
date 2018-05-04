@@ -3,40 +3,49 @@ jQuery(document).ready(function() {
   const form = $(".user-form");
   const parentDisable = $(".parentDisable");
   var triggered = false;
+  const inputs = $(".field");
 
+  inputs.click(function() {
+    $(this)
+      .find(".label-wrapper")
+      .find("label")
+      .addClass("focus");
+  });
 
-  function switchForm(){
+  function switchForm() {
     if (!triggered) {
-        parentDisable.css("display", "block");
-        parentDisable.addClass("fadeIn");
+      setTimeout(function() {
+        parentDisable.css("opacity", "0.8");
+      }, 100);
+      parentDisable.css("display", "block");
 
-        parentDisable.removeClass("fadeOut");
-        form.css("opacity", "1");
-        form.css("display", "block");
-        form.removeClass("fadeOut");
-        form.addClass("fadeIn");
-  
-        triggered = true;
-      } else {
-        parentDisable.removeClass("fadeIn");
+      parentDisable.removeClass("fadeOut");
+      form.css("opacity", "1");
+      form.css("display", "block");
+      form.removeClass("fadeOut");
+      form.addClass("fadeIn");
 
-        parentDisable.addClass("fadeOut");
-        form.addClass("fadeOut");
-        form.removeClass("fadeIn");
-        setTimeout(function() {
-            parentDisable.css("display", "none");
+      triggered = true;
+    } else {
+      parentDisable.removeClass("fadeIn");
 
-          form.css("display", "none");
-        }, 700);
-  
-        triggered = false;
-      }
+      parentDisable.css("opacity", "0");
+      form.addClass("fadeOut");
+      form.removeClass("fadeIn");
+      setTimeout(function() {
+        parentDisable.css("display", "none");
+
+        form.css("display", "none");
+      }, 700);
+
+      triggered = false;
+    }
   }
   userButton.click(function() {
     switchForm();
   });
 
-  parentDisable.click(function(){
+  parentDisable.click(function() {
     switchForm();
-  })
+  });
 });
