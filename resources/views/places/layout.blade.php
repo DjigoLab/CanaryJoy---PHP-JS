@@ -18,9 +18,10 @@
                 crossorigin="anonymous"></script>
         <script src="{{asset('js/forms.js')}}"></script>
         <script src="{{asset('js/place.js')}}"></script>
+        <script src="{{asset('js/searchbar.js')}}"></script>
         
     </head>
-<body class="body-bg" style="background:url({{$bg}} ">
+    <body class="body-bg" style="background:url({{$bg}} ">
         <nav class="menu">
         <a href="{{$swap}}"> <button class="swap"><i class="fas fa-exchange-alt"></i></button></a>
             <h3 class="title">{{$title}}</h3>
@@ -38,11 +39,8 @@
         <div class="user-form animated">
             @include('auth.register')
         </div>
-
-        <div class="search-container">
-            <input type="text" placeholder="Looking for something specific?">
-            <i class="fas fa-search animated rubberBand"></i>
-        </div>
+        @include('places.searchbar')
+       
         <div class="list-wrapper">
             @include('places.places')
             @include('places.place')

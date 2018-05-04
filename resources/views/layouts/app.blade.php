@@ -27,11 +27,11 @@
         <div class="already">  <p>Already registered? <a class="nav-link" href="{{ route('login') }}"> {{ __('Login') }}</a></p></div>
 
       @else
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }} <span class="caret"></span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
+      <span class="caret">You are </span> <a href="#" role="button" >
+            {{ Auth::user()->name }}
+        </a><i class="fas fa-user"></i>
+        <div>
+            <a href="{{ route('logout') }}"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}

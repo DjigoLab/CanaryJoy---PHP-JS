@@ -5,6 +5,22 @@ jQuery(document).ready(function() {
   const cardDesc = $(".card").find(".container");
   const listWrapper = $(".list-wrapper");
 
+  function cardAnimation(){
+  $('.card').hover(function(){
+      $(this).removeClass('flipInX')
+      if($(this).hasClass('pulse')){
+      $(this).removeClass('pulse')
+      $(this).removeClass('hovered')
+      }
+      else{
+      $(this).addClass('pulse')
+      $(this).addClass('hovered')
+  }
+  })}
+
+  
+  
+
   if($(".menu").find("h3").text() === "Party"){
     $(".card").addClass("dark");
     place.addClass("dark");
@@ -56,4 +72,6 @@ jQuery(document).ready(function() {
     var desc = $(this).parent().find(".desc").text();
     goToPlace(css, title, desc);
   });
+
+  cardAnimation();
 });
