@@ -10,11 +10,11 @@ class PlacesController extends Controller
     //
     public function index($tp)
     {
+        $places = Place::paginate();
+
         switch ($tp) {
 
             case "tr":
-            $places = Place::select('select * from places where type = "travel"');
-            $places = Place::paginate();
 
 
                 return view('places.layout')
@@ -24,8 +24,6 @@ class PlacesController extends Controller
                     ->with('bg', "../img/green.png)");
                 break;
             case "pt":
-            $places = DB::select('select * from places where type = "party"');
-            $places = Place::paginate();
 
             return view('places.layout')
                     ->with('title', 'Party')

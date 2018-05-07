@@ -307,3 +307,17 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.logged{
+  display: flex;
+  flex-flow: column;
+  font-family: 'Montserrat',sans-serif;
+  .caret{
+    align-self: center;a{
+      font-weight: bold;
+    }  }
+    .logout{
+      align-self: flex-end;
+      a{color: silver;}
+    }
+}

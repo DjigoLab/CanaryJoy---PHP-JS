@@ -240,3 +240,16 @@ body {
   z-index: 998;
   height: 100%;
   width: 100%; }
+
+.logged {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Montserrat',sans-serif; }
+  .logged .caret {
+    align-self: center; }
+    .logged .caret a {
+      font-weight: bold; }
+  .logged .logout {
+    align-self: flex-end; }
+    .logged .logout a {
+      color: silver; }

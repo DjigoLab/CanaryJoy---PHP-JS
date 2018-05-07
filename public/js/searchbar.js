@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   const cards = $(".list-wrapper").find(".card");
   var i = 0;
 
-  /*DELETE
+  /*DELETE WHAT YOU WRITE
    searchInput.change(function(){
       $(".card").each(function(){
         if($(this).find('h4').text() == searchInput.val()){
@@ -21,13 +21,12 @@ jQuery(document).ready(function() {
   };
 
 
-  searchInput.change(function(){
+  searchInput.keyup(function(){
       var text = searchInput.val()
       $(".card").each(function(){
         if($(this).find('h4').is(":contains('" + text + "')")) {
             $(this).css("display","flex");
             console.log($(this).find('h4').text());
-            
         }else{
             $(this).css("display","none");
 
