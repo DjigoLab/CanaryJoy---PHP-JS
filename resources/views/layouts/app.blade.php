@@ -37,6 +37,7 @@
         <div class="your-favorites">
             <h3>Your favorites</h3>
             <hr>
+            @include('auth.favorites')
             <hr>
 
         </div>
@@ -49,7 +50,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-        </div>
+                 </div>
     </div>
       @endguest
             </div>

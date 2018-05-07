@@ -67,9 +67,15 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-(function webpackMissingModule() { throw new Error("Cannot find module \"/home/antonio-djigo/Desktop/LaraPPP/CanaryJoy/resources/assets\""); }());
-(function webpackMissingModule() { throw new Error("Cannot find module \"/home/antonio-djigo/Desktop/LaraPPP/CanaryJoy/resources/assets/sass/app.scss\""); }());
+(function webpackMissingModule() { throw new Error("Cannot find module \"/home/antonio-djigo/Desktop/LaraPPP/CanaryJoy---PHP-JS/resources/assets\""); }());
+module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -15,7 +15,6 @@
     <i class="fas fa-share-alt"></i> 
     <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
     </favorite>
-    
   </div>
 </div>
 @endif
@@ -35,9 +34,12 @@
     <i class="fas fa-share-alt"></i> 
     <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
     </favorite>
-    
+  
+
   </div>
 </div>
 @endif
 
 @endforeach
+
+<script src="{{ asset('js/app.js') }}" defer></script>

@@ -45,5 +45,6 @@
             @include('places.places')
             @include('places.place')
         </div>
+
     </body>
     </html>
