@@ -25,8 +25,12 @@ jQuery(document).ready(function() {
       var text = searchInput.val()
       $(".card").each(function(){
         if($(this).find('h4').is(":contains('" + text + "')")) {
-            $(this).css("display","none");
+            $(this).css("display","flex");
             console.log($(this).find('h4').text());
+            
+        }else{
+            $(this).css("display","none");
+
         }
       })
   })

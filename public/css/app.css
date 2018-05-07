@@ -1,93 +1,10 @@
-html,
-body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  background-color: #222; }
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.navbar-laravel {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
 
-.columns {
-  display: flex;
-  flex-basis: auto;
-  height: 100%;
-  filter: grayscale(100%); }
-  .columns.clicked {
-    animation: color 1s forwards; }
-  .columns .column {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; }
-    .columns .column h2 {
-      padding-top: 100px;
-      margin: 0px;
-      width: 100%;
-      text-align: center;
-      color: white;
-      font-size: 60px;
-      font-weight: normal;
-      font-family: 'Do Hyeon',sans-serif; }
-      .columns .column h2.travel-title {
-        color: white; }
-      .columns .column h2.party-title {
-        color: white; }
-    .columns .column a {
-      margin-left: auto;
-      margin-right: auto; }
-    .columns .column button {
-      width: 100%;
-      background: none;
-      font-weight: bold;
-      opacity: 0;
-      border: 0px; }
-      .columns .column button i {
-        font-size: 60px;
-        color: white; }
-      .columns .column button.show {
-        animation: appear 0.5s forwards; }
-      .columns .column button.hide {
-        animation: dissapear 0.5s forwards; }
-  .columns .column1 {
-    background: url("../img/explore.jpg") no-repeat center center fixed;
-    background-size: cover;
-    flex: 1; }
-    .columns .column1.open {
-      animation: open 3s  forwards; }
-    .columns .column1.close {
-      animation: close 1s  forwards; }
-  .columns .column2 {
-    background: url("../img/party.jpg") no-repeat center center fixed;
-    background-size: cover;
-    flex: 1; }
-    .columns .column2.open {
-      animation: open 3s  forwards; }
-    .columns .column2.close {
-      animation: close 1s  forwards; }
+html {
+  color: red;
+}
 
-@keyframes open {
-  0% {
-    flex: 1; }
-  100% {
-    flex: 12; } }
-
-@keyframes close {
-  0% {
-    filter: none; }
-  100% {
-    filter: grayscale(100%); } }
-
-@keyframes color {
-  0% {
-    filter: grayscale(100%); }
-  100% {
-    filter: none; } }
-
-@keyframes appear {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes dissapear {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }

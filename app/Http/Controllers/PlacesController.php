@@ -17,7 +17,7 @@ class PlacesController extends Controller
             $places = Place::paginate();
 
 
-                return view('places.layout', compact('places'))
+                return view('places.layout')
                     ->with('title', 'Travel')
                     ->with('places', $places)
                     ->with('swap', "/search/pt")
@@ -27,7 +27,7 @@ class PlacesController extends Controller
             $places = DB::select('select * from places where type = "party"');
             $places = Place::paginate();
 
-            return view('places.layout', compact('places'))
+            return view('places.layout')
                     ->with('title', 'Party')
                     ->with('places', $places)
                     ->with('swap', "/search/tr")
