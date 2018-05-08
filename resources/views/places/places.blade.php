@@ -1,6 +1,4 @@
-
-@foreach ($places as $place)
-@if ($place->type == "party" && $title == "Party")
+@foreach ($places as $place) @if ($place->type == "party" && $title == "Party")
 <div class="card animated flipInX">
   <div class="img-container" style="background: url({{$place->image}}) no-repeat center center; background-size: cover; " )>
     <h4>{{$place->title}}</h4>
@@ -12,14 +10,12 @@
 
   <div class="options">
     <i class="fas fa-ellipsis-h"></i>
-    <i class="fas fa-share-alt"></i> 
+    <i class="fas fa-share-alt"></i>
     <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
     </favorite>
   </div>
 </div>
-@endif
-
-@if ($place->type == "travel" && $title == "Travel")
+@endif @if ($place->type == "travel" && $title == "Travel")
 <div class="card animated flipInX">
   <div class="img-container" style="background: url({{$place->image}}) no-repeat center center; background-size: cover; " )>
     <h4>{{$place->title}}</h4>
@@ -31,15 +27,14 @@
 
   <div class="options">
     <i class="fas fa-ellipsis-h"></i>
-    <i class="fas fa-share-alt"></i> 
-    <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
-    </favorite>
-  
+    <i class="fas fa-share-alt"></i>
+    <favorite
+    :post={{ $place->id }}
+    :favorited={{ $place->favorited() ? 'true' : 'false' }}
+></favorite>
+<example-component></example-component>
 
   </div>
 </div>
-@endif
+@endif @endforeach
 
-@endforeach
-
-<script src="{{ asset('js/app.js') }}" defer></script>

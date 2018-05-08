@@ -6,7 +6,6 @@
         </a>
         <a href="#" v-else @click.prevent="favorite(place)">
             <i class="fas fa-star"></i>
-            a
         </a>
     </span>
     

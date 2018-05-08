@@ -22,8 +22,10 @@
       <p>{{$places[0]->description}}</p>
     <div class="options">
             <i class="fas fa-share-alt"></i>                  
-            <i class="far fa-star"></i>
-    </div>
+            <favorite
+            :post={{ $places[0]->id }}
+            :favorited={{ $places[0]->favorited() ? 'true' : 'false' }}
+        ></favorite>    </div>
 
     <div id="map"></div>
     <script>

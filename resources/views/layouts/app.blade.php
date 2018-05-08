@@ -37,7 +37,6 @@
         <div class="your-favorites">
             <h3>Your favorites</h3>
             <hr>
-            @include('auth.favorites')
             <hr>
 
         </div>
@@ -50,12 +49,20 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
+            <favorite
+            :post={{ $places[0]->id }}
+            :favorited={{ $places[0]->favorited() ? 'true' : 'false' }}
+        ></favorite>  
+
+        <example-component></example-component>
                  </div>
     </div>
+
       @endguest
             </div>
 
       
     </div>
+
 </body>
 </html>
