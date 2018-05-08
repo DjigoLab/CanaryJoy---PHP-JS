@@ -19,6 +19,7 @@
   </div>
 
   <div class="container">
+    
     <p>{{$places[0]->description}}</p>
     <div class="options">
       <i class="fas fa-share-alt"></i>

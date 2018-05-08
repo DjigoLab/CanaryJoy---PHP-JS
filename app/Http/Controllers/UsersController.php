@@ -12,11 +12,11 @@ class UsersController extends Controller
  * Get all favorite posts by user
  *
  * @return Response
- *//*
+ */
    public function myFavorites()
     {
         $myFavorites = Auth::user()->favorites;
 
         return view('auth.favorites', compact('favorites'));
-    }*/
+    }
 }

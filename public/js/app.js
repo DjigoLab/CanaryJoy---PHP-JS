@@ -47467,7 +47467,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     favorite: function favorite(place) {
       var _this = this;
 
-      axios.place("/favorite/" + place).then(function (response) {
+      axios.post("/favorite/" + place).then(function (response) {
         return _this.isFavorited = true;
       }).catch(function (response) {
         return console.log(response.data);
@@ -47476,7 +47476,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     unFavorite: function unFavorite(place) {
       var _this2 = this;
 
-      axios.place("/unfavorite/" + place).then(function (response) {
+      axios.post("/unfavorite/" + place).then(function (response) {
         return _this2.isFavorited = false;
       }).catch(function (response) {
         return console.log(response.data);

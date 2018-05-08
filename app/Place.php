@@ -13,8 +13,8 @@ class Place extends Model
 
     public function favorited()
     {
-        return (bool) Favorite::where('id', Auth::id())
-            ->where('id', $this->id)
+        return (bool) Favorite::where('user_id', Auth::id())
+            ->where('card_id', $this->id)
             ->first();
     }
 }

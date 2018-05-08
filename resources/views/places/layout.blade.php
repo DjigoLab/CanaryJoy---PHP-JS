@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 @extends('layouts.app')
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,16 +38,16 @@
                 <button class="user"><i class="fas fa-user"></i></button></a>
     </nav>
     <div class="parentDisable animated"></div>
-    <div class="user-form animated">
-    @include('auth.register')
-    </div>
+ 
     @include('places.searchbar')
 
     <div class="list-wrapper">
     @include('places.places')
     @include('places.place')
     </div>
-
+    <div class="user-form animated">
+            @include('auth.register')
+            </div>
 </body>
 
 </html>

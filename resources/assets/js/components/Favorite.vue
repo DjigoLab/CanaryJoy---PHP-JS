@@ -16,7 +16,7 @@ export default {
   data: function() {
     return {
       isFavorited: ""
-    }
+    };
   },
 
   mounted() {
@@ -32,14 +32,14 @@ export default {
   methods: {
     favorite(place) {
       axios
-        .place("/favorite/" + place)
+        .post("/favorite/" + place)
         .then(response => (this.isFavorited = true))
         .catch(response => console.log(response.data));
     },
 
     unFavorite(place) {
       axios
-        .place("/unfavorite/" + place)
+        .post("/unfavorite/" + place)
         .then(response => (this.isFavorited = false))
         .catch(response => console.log(response.data));
     }

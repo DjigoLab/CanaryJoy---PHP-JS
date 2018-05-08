@@ -37,6 +37,9 @@
         <div class="your-favorites">
             <h3>Your favorites</h3>
             <hr>
+            <li>
+                    <a href="{{ url('favorites') }}">My Favorites</a>
+                </li>
             <hr>
 
         </div>

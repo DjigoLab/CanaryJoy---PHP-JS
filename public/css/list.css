@@ -146,7 +146,7 @@ body {
     padding: 15px;
     display: flex;
     color: #222; }
-    .list-wrapper .options i {
+    .list-wrapper .options i, .list-wrapper .options a {
       padding: 0px 10px; }
     .list-wrapper .options :first-child {
       margin-right: auto; }

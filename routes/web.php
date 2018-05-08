@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/search/{tp}', 'PlacesController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('my_favorites', 'UsersController@myFavorites')->middleware('auth');
 
 Route::post('favorite/{place}', 'PlacesController@favoriteCard');
 Route::post('unfavorite/{place}', 'PlacesController@unFavoriteCard');
+Route::get('favorites', 'UsersController@myFavorites')->middleware('auth');

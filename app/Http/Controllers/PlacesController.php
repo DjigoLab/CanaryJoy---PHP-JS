@@ -10,7 +10,7 @@ class PlacesController extends Controller
     //
     public function index($tp)
     {
-        $places = Place::paginate();
+        $places = Place::paginate(100);
 
         switch ($tp) {
 
