@@ -76,6 +76,9 @@ body {
     .list-wrapper .place-info.light {
       background: #e0e0e0;
       color: #222; }
+      .list-wrapper .card.light .options i,
+      .list-wrapper .place-info.light .options i {
+        color: #222; }
     .list-wrapper .card .img-container,
     .list-wrapper .place-info .img-container {
       width: 100%;

@@ -4,8 +4,9 @@ namespace App;
 
 // remember to use
 use App\Favorite;
+use Auth;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
 
 class Place extends Model
 {

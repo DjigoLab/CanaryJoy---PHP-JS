@@ -32,6 +32,6 @@ class User extends Authenticatable
      */
     public function favorites()
     {
-        return $this->belongsToMany(Place::class, 'favorites', 'id', 'id')->withTimeStamps();
+        return $this->belongsToMany(Place::class, 'favorites', 'user_id', 'card_id')->withTimeStamps();
     }
 }

@@ -49,13 +49,8 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            <favorite
-            :post={{ $places[0]->id }}
-            :favorited={{ $places[0]->favorited() ? 'true' : 'false' }}
-        ></favorite>  
-
-        <example-component></example-component>
-                 </div>
+         
+        </div>
     </div>
 
       @endguest

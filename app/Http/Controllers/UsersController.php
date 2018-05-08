@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 
+use Auth;
 class UsersController extends Controller
 {
     //// remember to use
@@ -12,8 +12,8 @@ class UsersController extends Controller
  * Get all favorite posts by user
  *
  * @return Response
- */
-   /* public function myFavorites()
+ *//*
+   public function myFavorites()
     {
         $myFavorites = Auth::user()->favorites;
 

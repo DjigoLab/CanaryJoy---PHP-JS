@@ -95,6 +95,11 @@ body {
     &.light {
       background: #e0e0e0;
       color: #222;
+      .options {
+        i {
+          color: #222;
+        }
+      }
     }
     .img-container {
       width: 100%;
@@ -183,7 +188,7 @@ body {
     padding: 15px;
     display: flex;
     color: #222;
-    i {
+    i,a{
       padding: 0px 10px;
     }
     :first-child {
