@@ -51,7 +51,7 @@ body {
   input {
     width: 80%;
     font-size: 16px;
-    background: #ec9c9c25;
+    background: #ffffff25;
     padding: 5px;
     border: 0px;
     color: white;
@@ -86,7 +86,8 @@ body {
     &.dark {
       background: #222;
       color: whitesmoke;
-      .options {
+      .options,
+      .moreopt {
         i {
           color: whitesmoke;
         }
@@ -95,7 +96,8 @@ body {
     &.light {
       background: #e0e0e0;
       color: #222;
-      .options {
+      .options,
+      .moreopt {
         i {
           color: #222;
         }
@@ -138,6 +140,9 @@ body {
       -moz-box-shadow: 0px 0px 25px 1px silver;
       box-shadow: 0px 0px 25px 1px silver;
     }
+    .share {
+      display: flex;
+    }
   }
 
   .place-info {
@@ -150,8 +155,24 @@ body {
     width: 100%;
     border-radius: 0px;
 
+    .container{
+      padding: 15px;
+      .desc{
+        padding: 15px;
+      }
+    }
+    hr {
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 15px;
+    }
     h4 {
       margin-top: 100px;
+    }
+
+    h5 {
+      padding-left: 15px;
+      margin-bottom: 10px;
     }
 
     p {
@@ -159,7 +180,7 @@ body {
     }
 
     #map {
-      margin: 15px -15px;
+      margin: 5px;
       height: 100%;
       min-height: 200px;
     }
@@ -177,7 +198,7 @@ body {
     }
   }
   .container {
-    padding: 15px;
+    padding: 5px 15px;
     display: flex;
     flex-flow: column;
     height: 100%;
@@ -195,9 +216,21 @@ body {
       margin-right: auto;
     }
   }
-  .place-contact {
-    margin-top: auto;
+
+  .moreopt {
+    font-size: 22px;
     padding: 15px;
+    display: flex;
+    color: #222;
+    justify-content: center;
+    i,
+    a {
+      padding: 0px 10px;
+    }
+  }
+  .place-contact {
+    padding: 15px;
+    margin-top: auto;
     p {
       text-align: center;
     }
@@ -390,14 +423,14 @@ body {
     }
   }
 
-    &.dark {
-      background: #222;
+  &.dark {
+    background: #222;
 
-      .titles {
-        display: grid;
-        align-self: center;
-        font-family: "Montserrat", sans-serif;
-        color: #222;
+    .titles {
+      display: grid;
+      align-self: center;
+      font-family: "Montserrat", sans-serif;
+      color: #222;
       h2 {
         font-size: 12vh;
         grid-column: 1/2;

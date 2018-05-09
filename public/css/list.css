@@ -40,7 +40,7 @@ body {
   .search-container input {
     width: 80%;
     font-size: 16px;
-    background: #ec9c9c25;
+    background: #ffffff25;
     padding: 5px;
     border: 0px;
     color: white;
@@ -70,14 +70,18 @@ body {
       background: #222;
       color: whitesmoke; }
       .list-wrapper .card.dark .options i,
-      .list-wrapper .place-info.dark .options i {
+      .list-wrapper .card.dark .moreopt i,
+      .list-wrapper .place-info.dark .options i,
+      .list-wrapper .place-info.dark .moreopt i {
         color: whitesmoke; }
     .list-wrapper .card.light,
     .list-wrapper .place-info.light {
       background: #e0e0e0;
       color: #222; }
       .list-wrapper .card.light .options i,
-      .list-wrapper .place-info.light .options i {
+      .list-wrapper .card.light .moreopt i,
+      .list-wrapper .place-info.light .options i,
+      .list-wrapper .place-info.light .moreopt i {
         color: #222; }
     .list-wrapper .card .img-container,
     .list-wrapper .place-info .img-container {
@@ -110,6 +114,8 @@ body {
     -webkit-box-shadow: 0px 0px 25px 1px silver;
     -moz-box-shadow: 0px 0px 25px 1px silver;
     box-shadow: 0px 0px 25px 1px silver; }
+  .list-wrapper .card .share {
+    display: flex; }
   .list-wrapper .place-info {
     display: none;
     position: absolute;
@@ -119,12 +125,23 @@ body {
     min-height: 100%;
     width: 100%;
     border-radius: 0px; }
+    .list-wrapper .place-info .container {
+      padding: 15px; }
+      .list-wrapper .place-info .container .desc {
+        padding: 15px; }
+    .list-wrapper .place-info hr {
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 15px; }
     .list-wrapper .place-info h4 {
       margin-top: 100px; }
+    .list-wrapper .place-info h5 {
+      padding-left: 15px;
+      margin-bottom: 10px; }
     .list-wrapper .place-info p {
       text-align: center; }
     .list-wrapper .place-info #map {
-      margin: 15px -15px;
+      margin: 5px;
       height: 100%;
       min-height: 200px; }
     .list-wrapper .place-info .img-container {
@@ -137,7 +154,7 @@ body {
         font-size: 30px;
         color: whitesmoke; }
   .list-wrapper .container {
-    padding: 15px;
+    padding: 5px 15px;
     display: flex;
     flex-flow: column;
     height: 100%; }
@@ -151,9 +168,18 @@ body {
       padding: 0px 10px; }
     .list-wrapper .options :first-child {
       margin-right: auto; }
+  .list-wrapper .moreopt {
+    font-size: 22px;
+    padding: 15px;
+    display: flex;
+    color: #222;
+    justify-content: center; }
+    .list-wrapper .moreopt i,
+    .list-wrapper .moreopt a {
+      padding: 0px 10px; }
   .list-wrapper .place-contact {
-    margin-top: auto;
-    padding: 15px; }
+    padding: 15px;
+    margin-top: auto; }
     .list-wrapper .place-contact p {
       text-align: center; }
 

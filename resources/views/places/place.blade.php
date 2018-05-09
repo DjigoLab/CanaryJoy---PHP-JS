@@ -5,37 +5,32 @@
     <h4>{{$places[0]->title}}</h4>
   </div>
 
-  <div class="place-tags">
-    <ul class="tag-list">
-      <li class="tag tag1">tag</li>
-      <li class="tag tag2">tag</li>
-      <li class="tag tag3">tag</li>
-      <li class="tag tag4">tag</li>
-      <li class="tag tag5">tag</li>
-      <li class="tag tag1">tag</li>
-      <li class="tag tag2">tag</li>
 
-    </ul>
-  </div>
 
   <div class="container">
-    
-    <p>{{$places[16]->description}}</p>
-    <div class="options">
-      <i class="fas fa-share-alt"></i>
-      <favorite
-      :place={{ $places[0]->id }}
-      :favorited={{ $places[0]->favorited() ? 'true' : 'false' }}
-  ></favorite>
-    </div>
 
-    <div id="map"></div>
+    <p class="desc">{{$places[16]->description}}</p>
+    <div class="moreopt share animated">
+        <a href="#x" class="optbt"> <i class="fab fa-instagram"></i></a>
+        <a href="#x" class="optbt"><i class="fab fa-whatsapp"></i></a>
+        <a href="#x" class="optbt"><i class="fab fa-facebook-square"></i></a>
+        <a href="#x" class="optbt"><i class="fab fa-twitter-square"></i> </a>
+      </div>
+    <div class="options animated">
+      <i class="fas fa-share-alt"></i>
+      <favorite :place={{ $places[0]->id }} :favorited={{ $places[0]->favorited() ? 'true' : 'false' }} >
+      </favorite>
+    </div>
+    <h5>Mapa</h5>
+    <hr>
+    <div id="map">      
+    </div>
     <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: 28.107533985838646, lng: -15.434827436718706},
+          zoom: 12
         });
       }
     </script>
@@ -44,8 +39,12 @@
 
   </div>
   <div class="place-contact">
-    <p> email bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail bla blaemail
-      bla blaemail bla bla</p>
+    <h5>Contacto</h5>
+      <hr>
+    <p>
+      Ayuntamiento de Las Palmas de Gran Canaria Casa del Turismo - Parque Santa Catalina 35007 Las Palmas de Gran Canaria Spain</p>
+    <p>
+      Tel. +34 928446824 (Concejalía de Turismo) </p>
   </div>
 
 </div>
