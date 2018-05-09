@@ -10,6 +10,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{asset('js/login.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -25,7 +26,7 @@
       <main class="py-4">
             @yield('content')
         </main>
-        <div class="already">  <p>Already registered? <a class="nav-link" href="{{ route('login') }}"> {{ __('Login') }}</a></p></div>
+        <div class="already">  <p>Already registered? <a class="nav-link" href="#"> {{ __('Login') }}</a></p></div>
 
       @else
       <div class="logged">

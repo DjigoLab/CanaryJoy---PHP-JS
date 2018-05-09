@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
   searchInput.keyup(function(){
       var text = searchInput.val()
       $(".card").each(function(){
-        if($(this).find('h4').is(":contains('" + text + "')")) {
+        if($(this).find('h4').is(":contains('" + text + "')") || $(this).find('.desc').is(":contains('" + text + "')")) {
             $(this).css("display","flex");
             console.log($(this).find('h4').text());
         }else{

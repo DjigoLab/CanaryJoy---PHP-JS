@@ -20,7 +20,7 @@
 
   <div class="container">
     
-    <p>{{$places[0]->description}}</p>
+    <p>{{$places[16]->description}}</p>
     <div class="options">
       <i class="fas fa-share-alt"></i>
       <favorite

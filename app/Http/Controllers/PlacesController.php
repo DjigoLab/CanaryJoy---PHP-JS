@@ -10,7 +10,7 @@ class PlacesController extends Controller
     //
     public function index($tp)
     {
-        $places = Place::paginate(100);
+        $places = Place::paginate(200);
 
         switch ($tp) {
 
@@ -21,7 +21,7 @@ class PlacesController extends Controller
                     ->with('title', 'Travel')
                     ->with('places', $places)
                     ->with('swap', "/search/pt")
-                    ->with('bg', "../img/green.png)");
+                    ->with('bg', "../img/wood.png)");
                 break;
             case "pt":
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@extends('layouts.app')
 
 <head>
     <meta charset="UTF-8">
@@ -20,8 +19,13 @@
     <script src="{{asset('js/forms.js')}}"></script>
     <script src="{{asset('js/place.js')}}"></script>
     <script src="{{asset('js/searchbar.js')}}"></script>
-
+    <script src="{{asset('js/swapfx.js')}}"></script>
 </head>
+<div class="swap-splash animated light">
+    <div class="titles">
+<h2>Canary</h2>
+<h3>Joy</h3>
+<h4>Erasmus & Traveling</h4></div></div>
 
 <body class="body-bg" style="background:url({{$bg}} ">
     <nav class="menu">
@@ -38,7 +42,6 @@
                 <button class="user"><i class="fas fa-user"></i></button></a>
     </nav>
     <div class="parentDisable animated"></div>
- 
     @include('places.searchbar')
 
     <div class="list-wrapper">
@@ -46,8 +49,8 @@
     @include('places.place')
     </div>
     <div class="user-form animated">
-            @include('auth.register')
-            </div>
+    @include('auth.register')
+    </div>
 </body>
 
 </html>
