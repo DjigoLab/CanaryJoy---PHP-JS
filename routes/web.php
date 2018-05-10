@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/search/{tp}', 'PlacesController@index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('search/{tp}', 'PlacesController@index');
+Route::get('home', 'HomeController@index')->name('home');
 
 Route::post('favorite/{place}', 'PlacesController@favoriteCard');
 Route::post('unfavorite/{place}', 'PlacesController@unFavoriteCard');

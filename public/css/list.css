@@ -65,24 +65,37 @@ body {
     display: flex;
     flex-flow: column;
     border-radius: 10px; }
+    .list-wrapper .card .desc,
+    .list-wrapper .place-info .desc {
+      text-align: center; }
     .list-wrapper .card.dark,
     .list-wrapper .place-info.dark {
       background: #222;
       color: whitesmoke; }
-      .list-wrapper .card.dark .options i,
-      .list-wrapper .card.dark .moreopt i,
-      .list-wrapper .place-info.dark .options i,
-      .list-wrapper .place-info.dark .moreopt i {
-        color: whitesmoke; }
+      .list-wrapper .card.dark .options,
+      .list-wrapper .card.dark .moreopt,
+      .list-wrapper .place-info.dark .options,
+      .list-wrapper .place-info.dark .moreopt {
+        margin-top: auto; }
+        .list-wrapper .card.dark .options i,
+        .list-wrapper .card.dark .moreopt i,
+        .list-wrapper .place-info.dark .options i,
+        .list-wrapper .place-info.dark .moreopt i {
+          color: whitesmoke; }
     .list-wrapper .card.light,
     .list-wrapper .place-info.light {
       background: #e0e0e0;
       color: #222; }
-      .list-wrapper .card.light .options i,
-      .list-wrapper .card.light .moreopt i,
-      .list-wrapper .place-info.light .options i,
-      .list-wrapper .place-info.light .moreopt i {
-        color: #222; }
+      .list-wrapper .card.light .options,
+      .list-wrapper .card.light .moreopt,
+      .list-wrapper .place-info.light .options,
+      .list-wrapper .place-info.light .moreopt {
+        margin-top: auto; }
+        .list-wrapper .card.light .options i,
+        .list-wrapper .card.light .moreopt i,
+        .list-wrapper .place-info.light .options i,
+        .list-wrapper .place-info.light .moreopt i {
+          color: #222; }
     .list-wrapper .card .img-container,
     .list-wrapper .place-info .img-container {
       width: 100%;
@@ -149,15 +162,15 @@ body {
       min-height: 300px; }
       .list-wrapper .place-info .img-container i {
         position: absolute;
-        top: 22px;
+        top: 20px;
         left: 5%;
+        z-index: 999;
         font-size: 30px;
         color: whitesmoke; }
   .list-wrapper .container {
     padding: 5px 15px;
     display: flex;
-    flex-flow: column;
-    height: 100%; }
+    flex-flow: column; }
   .list-wrapper .options {
     font-size: 22px;
     padding: 15px;

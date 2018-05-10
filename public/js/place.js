@@ -1,11 +1,11 @@
 jQuery(document).ready(function() {
   const place = $(".place-info");
-  const arrow = $(".place-info").find(".fa-arrow-left");
+  const arrow = $(".place-info").find(".fa-arrow-circle-left");
   const cardImage = $(".card").find(".img-container");
   const cardDesc = $(".card").find(".container");
   const listWrapper = $(".list-wrapper");
   const optionsBar = $(".options");
-  const shareButton = $(".options").find(".fa-share-alt");
+  const shareButton = $(".options").parent().find(".fa-share-alt");
   const shareOptions = $(".moreopt");
   var triggered = false;
 
@@ -98,21 +98,6 @@ jQuery(document).ready(function() {
       arrow.css("pointer-events", "auto");
     }, 1000);
   }
-  arrow.click(function() {
-    backToPlaces();
-    $("html, body").animate({ scrollTop: "0px" }, 100);
-  });
-  cardImage.click(function() {
-    var css = $(this).attr("style");
-    var title = $(this)
-      .find("h4")
-      .text();
-    var desc = $(this)
-      .parent()
-      .find(".desc")
-      .text();
-    goToPlace(css, title, desc);
-  });
   function arrowAnimation() {
     var element = $(".follow-scroll"),
       originalY = arrow.offset().top;
@@ -132,6 +117,22 @@ jQuery(document).ready(function() {
       );
     });
   }
+  arrow.click(function() {
+    backToPlaces();
+    $("html, body").animate({ scrollTop: "0px" }, 100);
+  });
+  cardImage.click(function() {
+    var css = $(this).attr("style");
+    var title = $(this)
+      .find("h4")
+      .text();
+    var desc = $(this)
+      .parent()
+      .find(".desc")
+      .text();
+    goToPlace(css, title, desc);
+  });
+  
   cardAnimation();
   shareAnimation();
   arrowAnimation();

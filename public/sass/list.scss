@@ -82,12 +82,17 @@ body {
     display: flex;
     flex-flow: column;
     border-radius: 10px;
+    .desc{
+      text-align: center;
 
+    }
     &.dark {
       background: #222;
       color: whitesmoke;
       .options,
       .moreopt {
+        margin-top: auto;
+
         i {
           color: whitesmoke;
         }
@@ -98,6 +103,8 @@ body {
       color: #222;
       .options,
       .moreopt {
+        margin-top: auto;
+
         i {
           color: #222;
         }
@@ -190,8 +197,9 @@ body {
       min-height: 300px;
       i {
         position: absolute;
+        top: 20px;
         left: 5%;
-        z-index: -1;
+        z-index: 999;
         font-size: 30px;
         color: whitesmoke;
       }
@@ -201,7 +209,6 @@ body {
     padding: 5px 15px;
     display: flex;
     flex-flow: column;
-    height: 100%;
   }
   .options {
     font-size: 22px;

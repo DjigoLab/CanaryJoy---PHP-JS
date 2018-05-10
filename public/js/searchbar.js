@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
   const cards = $(".list-wrapper").find(".card");
   var i = 0;
 
-  /*DELETE WHAT YOU WRITE
+  /*DELETES WHAT YOU WRITE
    searchInput.change(function(){
       $(".card").each(function(){
         if($(this).find('h4').text() == searchInput.val()){

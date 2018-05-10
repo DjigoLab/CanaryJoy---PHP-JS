@@ -1,4 +1,3 @@
-// resources/views/users/my_favorites.blade.php
 
 @extends('layouts.app')
 
@@ -16,15 +15,13 @@
                     </div>
 
                     <div class="panel-body">
-                        {{ $myFavorite->body }}
+                        {{ $myFavorite->desc }}
                     </div>
                     @if (Auth::check())
-                        <div class="panel-footer">
                             <favorite
                                 :place={{ $myFavorite->id }}
                                 :favorited={{ $myFavorite->favorited() ? 'true' : 'false' }}
                             ></favorite>
-                        </div>
                     @endif
                 </div>
             @empty

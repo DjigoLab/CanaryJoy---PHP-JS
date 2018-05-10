@@ -1,8 +1,6 @@
 <div class="place-info animated">
-  <div class="img-container" style="background: url({{$places[0]->image}}) no-repeat center center fixed; background-size: cover; "
-    )>
-    <i class="fas fa-arrow-left"></i>
-    <h4>{{$places[0]->title}}</h4>
+  <div class="img-container" style="background: url({{$places[0]->image}}) no-repeat center center fixed; background-size: cover;")>
+    <i class="fas fa-arrow-circle-left"></i>    <h4>{{$places[0]->title}}</h4>
   </div>
 
 
@@ -11,11 +9,11 @@
 
     <p class="desc">{{$places[16]->description}}</p>
     <div class="moreopt share animated">
-        <a href="#x" class="optbt"> <i class="fab fa-instagram"></i></a>
-        <a href="#x" class="optbt"><i class="fab fa-whatsapp"></i></a>
-        <a href="#x" class="optbt"><i class="fab fa-facebook-square"></i></a>
-        <a href="#x" class="optbt"><i class="fab fa-twitter-square"></i> </a>
-      </div>
+      <a href="#x" class="optbt"> <i class="fab fa-instagram"></i></a>
+      <a href="#x" class="optbt"><i class="fab fa-whatsapp"></i></a>
+      <a href="#x" class="optbt"><i class="fab fa-facebook-square"></i></a>
+      <a href="#x" class="optbt"><i class="fab fa-twitter-square"></i> </a>
+    </div>
     <div class="options animated">
       <i class="fas fa-share-alt"></i>
       <favorite :place={{ $places[0]->id }} :favorited={{ $places[0]->favorited() ? 'true' : 'false' }} >
@@ -23,7 +21,7 @@
     </div>
     <h5>Mapa</h5>
     <hr>
-    <div id="map">      
+    <div id="map">
     </div>
     <script>
       var map;
@@ -40,7 +38,7 @@
   </div>
   <div class="place-contact">
     <h5>Contacto</h5>
-      <hr>
+    <hr>
     <p>
       Ayuntamiento de Las Palmas de Gran Canaria Casa del Turismo - Parque Santa Catalina 35007 Las Palmas de Gran Canaria Spain</p>
     <p>

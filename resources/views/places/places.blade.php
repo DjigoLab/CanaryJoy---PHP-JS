@@ -16,10 +16,8 @@
     
   <div class="options animated">
     <a href="#x"> <i class="fas fa-share-alt"></i></a> @if (Auth::check())
-    <div class="panel-footer">
       <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
       </favorite>
-    </div>
     @endif
   </div>
 </div>
@@ -43,10 +41,8 @@
 
   <div class="options animated">
     <a href="#x"> <i class="fas fa-share-alt"></i></a> @if (Auth::check())
-    <div class="panel-footer">
       <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
       </favorite>
-    </div>
     @endif
 
   </div>
