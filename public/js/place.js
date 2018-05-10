@@ -9,52 +9,6 @@ jQuery(document).ready(function() {
   const shareOptions = $(".moreopt");
   var triggered = false;
 
-  function shareAnimation(){
-    shareOptions.hide();
-  
-  
-    shareButton.click(function() {
-      optionsBar.addClass("flipOutX");
-  
-      setTimeout(() => {
-        optionsBar.hide();
-        shareOptions.show();
-        shareOptions.addClass("flipInX");
-        shareOptions.removeClass("flipOutX");
-      }, 800);
-    });
-  
-    $(".moreopt").click(function() {
-      shareOptions.removeClass("flipInX");
-     shareOptions.addClass("flipOutX");
-  
-      setTimeout(() => {
-        shareOptions.hide();
-        optionsBar.show();
-        optionsBar.addClass("flipInX");
-        optionsBar.removeClass("flipOutX");
-      }, 800);
-    });
-  
-  }
-
-  function cardAnimation() {
-    $(".card").hover(function() {
-      $(this).removeClass("flipInX");
-      if ($(this).hasClass("pulse")) {
-        $(this).removeClass("pulse");
-        setTimeout(() => {
-          $(this).removeClass("hovered");
-        }, 200);
-      } else {
-        $(this).addClass("pulse");
-        setTimeout(() => {
-          $(this).addClass("hovered");
-        }, 200);
-      }
-    });
-  }
-
   if (
     $(".menu")
       .find("h3")
@@ -74,6 +28,49 @@ jQuery(document).ready(function() {
       .addClass("light");
     place.find("h4").addClass("light");
   }
+
+  function shareAnimation() {
+    shareOptions.hide();
+
+    shareButton.click(function() {
+      optionsBar.addClass("flipOutX");
+
+      setTimeout(() => {
+        optionsBar.hide();
+        shareOptions.show();
+        shareOptions.addClass("flipInX");
+        shareOptions.removeClass("flipOutX");
+      }, 800);
+    });
+
+    $(".moreopt").click(function() {
+      shareOptions.removeClass("flipInX");
+      shareOptions.addClass("flipOutX");
+
+      setTimeout(() => {
+        shareOptions.hide();
+        optionsBar.show();
+        optionsBar.addClass("flipInX");
+        optionsBar.removeClass("flipOutX");
+      }, 800);
+    });
+  }
+  function cardAnimation() {
+    $(".card").hover(function() {
+      $(this).removeClass("flipInX");
+      if ($(this).hasClass("pulse")) {
+        $(this).removeClass("pulse");
+        setTimeout(() => {
+          $(this).removeClass("hovered");
+        }, 200);
+      } else {
+        $(this).addClass("pulse");
+        setTimeout(() => {
+          $(this).addClass("hovered");
+        }, 200);
+      }
+    });
+  }
   function backToPlaces() {
     place.removeClass("bounceInLeft");
     listWrapper.css("height", "auto");
@@ -83,7 +80,6 @@ jQuery(document).ready(function() {
       place.css("display", "none");
     }, 1000);
   }
-
   function goToPlace(css, title, desc) {
     place.find(".img-container").attr("style", css);
     place.find("h4").text(title);
@@ -104,8 +100,8 @@ jQuery(document).ready(function() {
   }
   arrow.click(function() {
     backToPlaces();
+    $("html, body").animate({ scrollTop: "0px" }, 100);
   });
-
   cardImage.click(function() {
     var css = $(this).attr("style");
     var title = $(this)
@@ -117,7 +113,26 @@ jQuery(document).ready(function() {
       .text();
     goToPlace(css, title, desc);
   });
-  cardAnimation();
+  function arrowAnimation() {
+    var element = $(".follow-scroll"),
+      originalY = arrow.offset().top;
 
+    // Space between element and top of screen (when scrolling)
+    var topMargin = 20;
+
+    // Should probably be set in CSS; but here just for emphasis
+    $(window).on("scroll", function(event) {
+      var scrollTop = $(window).scrollTop();
+
+      arrow.stop(false, false).animate(
+        {
+          top: scrollTop < originalY ? 0 : scrollTop - originalY + topMargin
+        },
+        300
+      );
+    });
+  }
+  cardAnimation();
   shareAnimation();
+  arrowAnimation();
 });
