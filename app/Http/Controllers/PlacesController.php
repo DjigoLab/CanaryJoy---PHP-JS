@@ -4,19 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Place;
 use DB;
+use Illuminate\Http\Request;
 
 class PlacesController extends Controller
 {
     //
     public function index($tp)
     {
-        $places = Place::paginate(200);
-
+        $places = DB::select('select * from places');
+        
         switch ($tp) {
 
             case "tr":
-
-
                 return view('places.layout')
                     ->with('title', 'Travel')
                     ->with('places', $places)
@@ -24,8 +23,7 @@ class PlacesController extends Controller
                     ->with('bg', "../img/wood.png)");
                 break;
             case "pt":
-
-            return view('places.layout')
+                return view('places.layout')
                     ->with('title', 'Party')
                     ->with('places', $places)
                     ->with('swap', "/search/tr")
@@ -35,31 +33,12 @@ class PlacesController extends Controller
 
     }
 
-/**
- * Favorite a particular Place
- *
- * @param  Place $place
- * @return Response
- */
-    public function favoriteCard(Place $place)
+    public function store(Request $request, Place $place)
     {
-        Auth::user()->favorites()->attach($place->id);
+       $id = $place->id;
+        $request->user()->favouriteProducts()->syncWithoutDetaching($id);
+        
 
         return back();
     }
-
-/**
- * Unfavorite a particular Place
- *
- * @param  Place $place
- * @return Response
- */
-    public function unFavoriteCard(Place $place)
-    {
-        Auth::user()->favorites()->detach($place->id);
-
-        return back();
-    }
-
-    
 }

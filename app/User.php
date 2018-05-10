@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Place;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -27,11 +28,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * Get all of favorite posts for the user.
-     */
-    public function favorites()
+    public function favouriteProducts()
     {
-        return $this->belongsToMany(Place::class, 'favorites', 'user_id', 'card_id')->withTimeStamps();
+        return $this->morphedByMany(Place::class, 'favouriteable')
+            ->withPivot(['created_at'])
+            ->orderBy('pivot_created_at');
+    }
+
+    public function index(Request $request)
+    {
+        $places = $request->user()->favouriteProducts()->paginate(5);
+
+        return view('fav', compact('places'));
     }
 }

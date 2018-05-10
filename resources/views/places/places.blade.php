@@ -2,6 +2,7 @@
 <div class="card animated flipInX">
   <div class="img-container" style="background: url({{$place->image}}) no-repeat center center; background-size: cover; " )>
     <h4>{{$place->title}}</h4>
+    <span class="id">{{$place->id}}</span>
   </div>
 
   <div class="container">
@@ -15,10 +16,17 @@
     </div>
     
   <div class="options animated">
-    <a href="#x"> <i class="fas fa-share-alt"></i></a> @if (Auth::check())
-      <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
-      </favorite>
-    @endif
+    <a href="#x"> <i class="fas fa-share-alt"></i></a>
+    @if (Auth::check())
+      
+    <a href="#"    action="{{ route('place.fav', $place->id) }}" method="POST">
+        {{ csrf_field() }} <i class="far fa-star"></i></a>
+    
+    
+  
+    </form>
+    
+        @endif
   </div>
 </div>
 
@@ -41,8 +49,10 @@
 
   <div class="options animated">
     <a href="#x"> <i class="fas fa-share-alt"></i></a> @if (Auth::check())
-      <favorite :place={{ $place->id }} :favorited={{ $place->favorited() ? 'true' : 'false' }} >
-      </favorite>
+    <a href="#"    action="{{ route('place.fav', $place->id) }}" method="POST">
+        {{ csrf_field() }} <i class="far fa-star"></i></a>
+    
+    
     @endif
 
   </div>

@@ -1,12 +1,15 @@
 <div class="place-info animated">
-  <div class="img-container" style="background: url({{$places[0]->image}}) no-repeat center center fixed; background-size: cover;")>
-    <i class="fas fa-arrow-circle-left"></i>    <h4>{{$places[0]->title}}</h4>
+  <div class="img-container" style="background: url({{$places[0]->image}}) no-repeat center center fixed; background-size: cover;"
+    )>
+    <i class="fas fa-arrow-circle-left"></i>
+    <h4>
+    </h4>
+    <span class="id">{{$places[0]->id}}</span>
   </div>
 
 
 
   <div class="container">
-
     <p class="desc">{{$places[16]->description}}</p>
     <div class="moreopt share animated">
       <a href="#x" class="optbt"> <i class="fab fa-instagram"></i></a>
@@ -16,8 +19,7 @@
     </div>
     <div class="options animated">
       <i class="fas fa-share-alt"></i>
-      <favorite :place={{ $places[0]->id }} :favorited={{ $places[0]->favorited() ? 'true' : 'false' }} >
-      </favorite>
+   
     </div>
     <h5>Mapa</h5>
     <hr>

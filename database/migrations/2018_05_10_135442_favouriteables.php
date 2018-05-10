@@ -4,14 +4,14 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFavoritesTable extends Migration
+class Favouriteables extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    
+  
 public function up()
 {
     Schema::create('favouriteables', function (Blueprint $table) {
@@ -33,6 +33,6 @@ public function up()
      */
     public function down()
     {
-        Schema::dropIfExists('favorites');
+        //
     }
 }

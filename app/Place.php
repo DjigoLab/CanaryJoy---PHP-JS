@@ -2,19 +2,31 @@
 
 namespace App;
 
-// remember to use
-use App\Favorite;
-use Auth;
-
 use Illuminate\Database\Eloquent\Model;
-
 class Place extends Model
-{
 
-    public function favorited()
+{
+    //
+
+    public function up()
     {
-        return (bool) Favorite::where('user_id', Auth::id())
-            ->where('card_id', $this->id)
-            ->first();
+        Schema::create('favouriteables', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('favouriteable_id');
+            $table->string('favouriteable_type');
+            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+
+    public function favourites()
+    {
+        return $this->morphToMany(User::class, 'favouriteable');
+    }
+
+    public function favouritedBy(User $user)
+    {
+        return $this->favourites->contains($user);
     }
 }

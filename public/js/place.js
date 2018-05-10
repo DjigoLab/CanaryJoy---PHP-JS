@@ -80,11 +80,11 @@ jQuery(document).ready(function() {
       place.css("display", "none");
     }, 1000);
   }
-  function goToPlace(css, title, desc) {
+  function goToPlace(css, title, desc, id) {
     place.find(".img-container").attr("style", css);
     place.find("h4").text(title);
     place.find(".desc").text(desc);
-
+    place.find('.id').text(id)
     $("html, body").animate({ scrollTop: "0px" }, 100);
     place.removeClass("bounceOutLeft");
     place.addClass("bounceInLeft");
@@ -130,7 +130,9 @@ jQuery(document).ready(function() {
       .parent()
       .find(".desc")
       .text();
-    goToPlace(css, title, desc);
+      var id = $(this).parent().find('.id').text();
+
+    goToPlace(css, title, desc, id);
   });
   
   cardAnimation();
