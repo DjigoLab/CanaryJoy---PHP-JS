@@ -54,5 +54,8 @@
     </button>
     </div>
 </form>
-   
+<div class="already">
+    <p>Already registered? <a class="nav-link" href="#"> {{ __('Login') }}</a></p>
+</div>
+
 @endsection

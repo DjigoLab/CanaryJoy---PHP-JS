@@ -28,10 +28,7 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <div class="already">
-            <p>Already registered? <a class="nav-link" href="#"> {{ __('Login') }}</a></p>
-        </div>
-
+    
         @else
         <div class="logged">
             <span class="caret">You are <a href="#" role="button" >
