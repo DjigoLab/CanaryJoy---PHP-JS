@@ -15,7 +15,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('favorite', require('./components/Favorite.vue'));
 
 const vues = document.querySelectorAll(".options");
 Array.prototype.forEach.call(vues, (el, index) => new Vue({el}))
